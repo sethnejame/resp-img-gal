@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
   const [users, setUsers] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     //API call
-  },[])
+    async function fetchData() {
+      fetch("https://reqres.in//api/users")
+        .then(res => JSON.stringify(res))
+        .then(data => console.log(data));
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <div className="App">
