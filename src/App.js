@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Grid from "@material-ui/core/Grid";
 import "./App.css";
 
 function App() {
@@ -20,11 +21,11 @@ function App() {
   return (
     <div className="App">
       <h3>Responsive Image Gallery</h3>
-      <ul>
+      <Grid container spacing={10} style={{ padding: "24px" }}>
         {users.map((item, index) => {
           return <li key={index}>{item.first_name}</li>;
         })}
-      </ul>
+      </Grid>
     </div>
   );
 }
