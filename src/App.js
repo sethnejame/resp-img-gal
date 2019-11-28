@@ -4,6 +4,10 @@ import './App.css';
 function App() {
   const [users, setUsers] = useState([]);
 
+  useEffect(()=> {
+    //API call
+  },[])
+
   return (
     <div className="App">
       <h3>Responsive Image Gallery</h3>
