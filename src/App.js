@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [users, setUsers] = useState([]);
+
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      <h3>Responsive Image Gallery</h3>
     </div>
   );
 }
