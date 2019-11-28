@@ -5,10 +5,9 @@ function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    //API call
     async function fetchData() {
-      fetch("https://reqres.in//api/users")
-        .then(res => JSON.stringify(res))
+      fetch("https://reqres.in/api/users?page=1")
+        .then(res => res.json())
         .then(data => console.log(data));
     }
 
